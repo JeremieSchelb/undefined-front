@@ -1,13 +1,16 @@
 import './App.scss';
 import {Routes, Route, Link} from "react-router-dom"
+import Rescuer from "./components/Rescuer"
+
 function App() {
   return (
     <div className="App">
       <Link className="p-3" to="/">Hello</Link>
       <Link className="p-3" to="/fr">Bonjour</Link>
       <Routes>
-        <Route path="/fr" element={BonjourMonde()}></Route>
-        <Route path="/" element={HelloWorld()}></Route>
+        <Route path="/fr" element={BonjourMonde()}/>
+        <Route path="/" element={HelloWorld()}/>
+        <Route path="/rescuer/:name" element={<Rescuer/>}/>
       </Routes>
     </div>
   );
