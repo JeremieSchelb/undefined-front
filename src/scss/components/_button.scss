@@ -1,3 +1,15 @@
-.button{
-    @apply rounded-md p-3 flex justify-center items-center;
+.button {
+	@apply rounded-md p-3 flex justify-center items-center shadow-md transition-colors duration-200;
+	&--b {
+		@apply bg-blue-700 text-white;
+		&:hover {
+			@apply text-blue-700 bg-white;
+		}
+	}
+	&--w {
+		@apply text-blue-700 bg-white;
+		&:hover {
+			@apply bg-blue-700 text-white;
+		}
+	}
 }

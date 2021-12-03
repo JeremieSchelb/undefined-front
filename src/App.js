@@ -1,4 +1,5 @@
 import "./App.scss";
+<<<<<<< HEAD
 import { Routes, Route, Link } from "react-router-dom";
 import Rescuer from "./templates/Rescuer";
 import Header from "./components/Header";
@@ -30,6 +31,18 @@ function HelloWorld() {
 
 function BonjourMonde() {
 	return <h1 className="App-link bg-dark-blue">Bonjour monde</h1>;
+=======
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./templates/Homepage";
+function App() {
+	return (
+		<div className="App">
+			<Routes>
+				<Route path="/" element={Homepage()}></Route>
+			</Routes>
+		</div>
+	);
+>>>>>>> feature/card-component
 }
 
 export default App;
