@@ -1,14 +1,15 @@
 import './App.scss'
 import { React, Routes, Route, Link } from 'react-router-dom'
 import Rescuer from './templates/Rescuer'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './Components/Header'
+import Search from './Components/Search'
+import Footer from './Components/Footer'
 
 function App() {
   return (
     <div className="App">
       <Header />
-        <Search/>
+      <Search />
       <Link className="p-3" to="/">
         Hello
       </Link>
