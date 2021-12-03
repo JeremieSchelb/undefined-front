@@ -2,6 +2,7 @@ import './App.scss';
 import {Routes, Route, Link} from "react-router-dom"
 import Rescuer from "./templates/Rescuer"
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={HelloWorld()}/>
         <Route path="/rescuer/:name" element={<Rescuer/>}/>
       </Routes>
+        <Footer/>
     </div>
   );
 }
