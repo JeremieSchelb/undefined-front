@@ -3,8 +3,8 @@ import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
-import Listing from './Templates/Listing'
-import Homepage from './Templates/Homepage'
+import Listing from './templates/Listing'
+import Homepage from './templates/Homepage'
 
 import { navItems, NavigationContext } from './Context/navigation'
 
