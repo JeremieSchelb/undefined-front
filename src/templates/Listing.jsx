@@ -1,7 +1,1 @@
-export default function Listing() {
-    return (
-        <div>
-            
-        </div>
-    );
-}
+export default function Listing() {}
