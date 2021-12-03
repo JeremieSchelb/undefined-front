@@ -4,7 +4,7 @@ const links = ["Plan du site", "Livre d’or", "Qui sommes nous", "Presse", "Men
 
 const Footer = (props) => {
     return (
-        <footer className={'py-5 bg-black'}>
+        <footer className={'py-5 bg-black mt-24'}>
             <div className={'max-w-prose md:max-w-screen-xl m-auto flex flex-col items-center md:items-baseline'}>
                 <div className={'flex flex-col md:flex-row md:justify-between items-center w-full'}>
                     <ul className={'flex flex-col md:flex-row'}>

@@ -1,25 +1,14 @@
 import './App.scss'
 import { React, Routes, Route, Link } from 'react-router-dom'
-import Rescuer from './templates/Rescuer'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Homepage from './templates/Homepage'
 
 function App() {
   return (
     <div className="App">
       <Header />
-        <Search/>
-      <Link className="p-3" to="/">
-        Hello
-      </Link>
-      <Link className="p-3" to="/fr">
-        Bonjour
-      </Link>
-      <Routes>
-        <Route path="/fr" element={BonjourMonde()} />
-        <Route path="/" element={HelloWorld()} />
-        <Route path="/rescuer/:name" element={<Rescuer />} />
-      </Routes>
+        <Homepage/>
       <Footer />
     </div>
   )
