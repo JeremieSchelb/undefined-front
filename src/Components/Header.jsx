@@ -1,5 +1,3 @@
-// import { Link } from 'react-router-dom';
-
 import {Link} from "react-router-dom";
 
 const links = ["accueil", "sauveteurs", "sorties en mer", "stations", "naufragés", "bateaux", "glossaire"]
