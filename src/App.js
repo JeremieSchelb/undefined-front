@@ -3,11 +3,13 @@ import {Routes, Route, Link} from "react-router-dom"
 import Rescuer from "./templates/Rescuer"
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Search from "./components/Search";
 
 function App() {
   return (
     <div className="App">
         <Header/>
+        <Search/>
       <Link className="p-3" to="/">Hello</Link>
       <Link className="p-3" to="/fr">Bonjour</Link>
       <Routes>
