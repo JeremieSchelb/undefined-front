@@ -14,9 +14,9 @@ function App() {
   return (
     <NavigationContext.Provider value={navItems}>
       <div className="App">
-        <BypassLinks idMenu="menu"/>
+        <BypassLinks idMenu="menu" idContent="content" idSearch="search"/>
         <Header />
-        <main className="max-w-screen-xl p-16 flex-grow">
+        <main id="content" className="max-w-screen-xl p-16 flex-grow">
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route exact path="/liste/:name" element={<Listing />} />
