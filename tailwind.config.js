@@ -21,6 +21,7 @@ module.exports = {
     },
   variants: {
     extend: {
+      visibility: ['focus-visible'],
     },
   },
   plugins: [],

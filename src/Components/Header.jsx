@@ -16,7 +16,7 @@ const Header = (props) => {
         <header className={'max-w-screen-xl flex py-5 items-center mx-auto justify-between'}>
             <nav className={'flex items-center'}>
             <img src="img/logo.png" alt=""/>
-                <ul className={'pl-8 flex'}>
+                <ul id="menu" className={'flex'}>
                     {links.map(item => <li className={'px-5 hover:bg-light-blue hover:text-light-grey'} key={item.name}><Link to={linkTo(item.name)}>{item.name}</Link></li>)}
                 </ul>
             </nav>
