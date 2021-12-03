@@ -1,10 +1,12 @@
 import './App.scss'
-import { React, Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import Rescuer from './Templates/Rescuer'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+import Listing from './Templates/Listing'
 
 function App() {
+  let listItems = []
   return (
     <div className="App">
       <Header />
@@ -18,6 +20,7 @@ function App() {
         <Route path="/fr" element={BonjourMonde()} />
         <Route path="/" element={HelloWorld()} />
         <Route path="/rescuer/:name" element={<Rescuer />} />
+        <Route path="/listing" element={<Listing type="boats" />} />
       </Routes>
       <Footer />
     </div>

@@ -8,7 +8,7 @@ const Footer = (props) => {
             <div className={'max-w-prose md:max-w-screen-xl m-auto flex flex-col items-center md:items-baseline'}>
                 <div className={'flex flex-col md:flex-row md:justify-between items-center w-full'}>
                     <ul className={'flex flex-col md:flex-row'}>
-                        {links.map(link => <li className={'py-2 md:px-4 text-light-grey'}><Link to={link}>{link}</Link>
+                        {links.map(link => <li className={'py-2 md:px-4 text-light-grey'} key={link}><Link to={link}>{link}</Link>
                         </li>)}
                     </ul>
                     <div className={'flex'}>

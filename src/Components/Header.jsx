@@ -9,9 +9,7 @@ const Header = (props) => {
             <nav className={'flex items-center'}>
             <img src="img/logo.png" alt=""/>
                 <ul className={'flex'}>
-                    <ul className={'flex'}>
-                        {links.map(link => <li className={'px-5 hover:bg-light-blue hover:text-light-grey'}><Link to={link}>{link}</Link></li>)}
-                    </ul>
+                    {links.map(link => <li className={'px-5 hover:bg-light-blue hover:text-light-grey'} key={link}><Link to={link}>{link}</Link></li>)}
                 </ul>
             </nav>
             <img src="img/search.svg" alt=""/>
