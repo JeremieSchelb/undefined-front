@@ -1,10 +1,11 @@
 import './App.scss'
 import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
-import Rescuer from './Templates/Rescuer'
-import Header from './Components/Header'
-import Footer from './Components/Footer'
-import Listing from './Templates/Listing'
+import Rescuer from './templates/Rescuer'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Listing from './templates/Listing'
+import Homepage from "./templates/Homepage";
 
 import { navItems, NavigationContext } from './Context/navigation'
 
@@ -19,6 +20,7 @@ function App() {
             {/* <Route path="/rescuer/:name" element={<Rescuer />} /> */}
             <Route exact path="/liste/:name" element={<Listing />} />
           </Routes>
+          <Homepage/>
         </main>
         <Footer />
       </div>
