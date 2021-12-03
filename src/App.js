@@ -1,15 +1,14 @@
-import './App.scss';
-import {Routes, Route} from "react-router-dom"
-import Homepage from './templates/Homepage';
+import "./App.scss";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./templates/Homepage";
 function App() {
-
-  return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={Homepage()}></Route>
-      </Routes>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Routes>
+				<Route path="/" element={Homepage()}></Route>
+			</Routes>
+		</div>
+	);
 }
 
 export default App;
