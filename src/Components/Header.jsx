@@ -1,15 +1,15 @@
-// import { Link } from 'react-router-dom';
-
 import {Link} from "react-router-dom";
+import React, { useContext } from "react";
+import { NavigationContext } from '../Context/navigation'
 
-const links = ["accueil", "sauveteurs", "sorties en mer", "stations", "naufragés", "bateaux", "glossaire"]
 const Header = (props) => {
+    const links = useContext(NavigationContext);
     return (
         <header className={'max-w-screen-xl flex py-5 items-center m-auto justify-between'}>
             <nav className={'flex items-center'}>
             <img src="img/logo.png" alt=""/>
                 <ul className={'flex'}>
-                    {links.map(link => <li className={'px-5 hover:bg-light-blue hover:text-light-grey'} key={link}><Link to={link}>{link}</Link></li>)}
+                    {links.map(item => <li className={'px-5 hover:bg-light-blue hover:text-light-grey'} key={item.name}><Link to={'/liste/'+item.name}>{item.name}</Link></li>)}
                 </ul>
             </nav>
             <img src="img/search.svg" alt=""/>

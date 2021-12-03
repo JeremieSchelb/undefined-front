@@ -1,14 +1,15 @@
 import {Link} from "react-router-dom";
-
-const links = ["Plan du site", "Livre d’or", "Qui sommes nous", "Presse", "Mentions légales"]
+import React, {useContext} from "react";
+import { NavigationContext } from "../Context/navigation";
 
 const Footer = (props) => {
+    const links = useContext(NavigationContext);
     return (
         <footer className={'py-5 bg-black'}>
             <div className={'max-w-prose md:max-w-screen-xl m-auto flex flex-col items-center md:items-baseline'}>
                 <div className={'flex flex-col md:flex-row md:justify-between items-center w-full'}>
                     <ul className={'flex flex-col md:flex-row'}>
-                        {links.map(link => <li className={'py-2 md:px-4 text-light-grey'} key={link}><Link to={link}>{link}</Link>
+                        {links.map(item => <li className={'py-2 md:px-4 text-light-grey'} key={item.name}><Link to={item.link}>{item.name}</Link>
                         </li>)}
                     </ul>
                     <div className={'flex'}>
