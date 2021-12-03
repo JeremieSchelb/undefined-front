@@ -12,14 +12,14 @@ export default function RescueList() {
             {id:2, title: 'titre 3', desc: 'Description 3', 'save' : 19},
         ];
 
-        const [data, setData] = useState()
-        useEffect(() => {
+        const [RescueData, setRescueData] = useState([])
 
         axios.get('https://api.undefined.oserya.fr/api/rescues').then(response => {
-           setData(response.data.data);
+            setRescueData(response.data.data.splice(0,3));
+
         })
-        }, []);
-        return items.map(item => (
+
+        return RescueData.map(item => (
             <li key={item.id}>
                 <RescueCard data={item}/>
             </li>

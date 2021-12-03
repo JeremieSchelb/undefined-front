@@ -10,11 +10,10 @@ export default function CardsList() {
             {id:1, title: 'titre 2', desc: 'Description 2'},
             {id:2, title: 'titre 3', desc: 'Description 3'},
         ];
-        const [ListData, setListData] = useState()
-        let data = axios.get('https://api.undefined.oserya.fr/api/articles').then(response => {
-                return response.data.data
+        const [ListData, setListData] = useState([])
+        axios.get('https://api.undefined.oserya.fr/api/articles').then(response => {
+            setListData(response.data.data.splice(0,3));
         })
-        console.log(data)
         return ListData.map(item => (
             <li key={item.id}>
                 <ArticleCard data={item}/>

@@ -11,7 +11,7 @@ export default function ArticleCard(props) {
 			<img className="w-full h-60 object-cover object-center" src={data.image} alt="" />
 			<main className="py-8 px-14 text-left">
 				<h2 className="uppercase font-bold text-xl mb-2">{data.title}</h2>
-				<p>{data.content.substr(2)}</p>
+				<p>{data.content}</p>
 				<button className="button button--b ml-auto mt-6">En savoir plus</button>
 			</main>
 		</div>

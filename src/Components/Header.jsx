@@ -12,7 +12,7 @@ const Header = (props) => {
                     {links.map(item => <li className={'px-5 hover:bg-light-blue hover:text-light-grey'} key={item.name}><Link to={'/liste/'+item.name}>{item.name}</Link></li>)}
                 </ul>
             </nav>
-            <img src="img/search.svg" alt=""/>
+            <img src="static/svg/search.svg" alt=""/>
         </header>
     )
 
