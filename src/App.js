@@ -17,7 +17,6 @@ function App() {
         <Header />
         <main className="max-w-screen-xl p-16">
           <Routes>
-            {/* <Route path="/rescuer/:name" element={<Rescuer />} /> */}
             <Route exact path="/liste/:name" element={<Listing />} />
           </Routes>
           <Homepage/>
@@ -28,4 +27,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
