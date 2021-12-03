@@ -19,10 +19,10 @@ const Footer = (props) => {
                         </li>)}
                     </ul>
                     <div className={'flex space-x-10'}>
-                        <a className="opacity-60 hover:opacity-100 focus:opacity-100" href="https://www.facebook.com/groups/938396409644949" title="Facebook">
+                        <a className="opacity-60 hover:opacity-100 focus:opacity-100" href="https://www.facebook.com/groups/938396409644949" target="blank" title="Twitter des Sauveteurs Dunkerquois (Nouvel onglet)">
 			                <Icon name="facebook"/>
                         </a>
-                        <a className="opacity-60 hover:opacity-100 focus:opacity-100" href="https://twitter.com/@boutelierphili1">
+                        <a className="opacity-60 hover:opacity-100 focus:opacity-100" href="https://twitter.com/@boutelierphili1" target="blank" title="Facebook des Sauveteurs Dunkerquois (Nouvel onglet)">
 			                <Icon name="twitter"/>
                         </a>
                     </div>
