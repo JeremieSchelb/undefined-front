@@ -1,6 +1,6 @@
-import Search from "../components/Search";
-import CardsList from "../components/CardsList";
-import RescueList from "../components/RescueList";
+import Search from "../Components/Search";
+import CardsList from "../Components/CardsList";
+import RescueList from "../Components/RescueList";
 
 
 export default function Homepage() {

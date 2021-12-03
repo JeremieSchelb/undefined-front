@@ -9,7 +9,7 @@ export default function RescueCard(props) {
                 <h2 className="uppercase font-bold text-xl mb-2">{data.title}</h2>
                 <p>{data.desc}</p>
                 <p>Personne sauvé : {data.save}</p>
-                <button className="button button--b ml-auto mt-6">En savoir plus</button>
+                <button className="button button--b mx-auto mt-6">En savoir plus</button>
             </main>
         </div>
     );

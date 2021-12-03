@@ -1,13 +1,13 @@
 import React from 'react'
 
 let navItems = [
-  { name: 'accueil', link: 'home' },
-  { name: 'sauveteurs', link: 'rescuer' },
-  { name: 'sorties en mer', link: 'rescue' },
+  { name: 'accueil', link: '/' },
+  { name: 'sauveteurs', link: 'rescuers' },
+  { name: 'sorties en mer', link: 'rescues' },
   { name: 'stations', link: 'stations' },
-  { name: 'naufragés', link: 'castaway' },
+  { name: 'naufrages', link: 'castaways' },
   { name: 'bateaux', link: 'boats' },
-  { name: 'glossaire', link: 'glossaire' },
+  //   { name: 'glossaire', link: 'glossaire' },
 ]
 const NavigationContext = React.createContext(navItems)
 

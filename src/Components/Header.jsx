@@ -4,15 +4,26 @@ import { NavigationContext } from '../Context/navigation'
 
 const Header = (props) => {
     const links = useContext(NavigationContext);
+    function linkTo(linkname) {
+        switch (linkname) {
+            case 'accueil':
+                return '/';
+            default:
+                return '/liste/'+linkname;
+        }
+    }
     return (
-        <header className={'max-w-screen-xl flex py-5 items-center m-auto justify-between'}>
+        <header className={'max-w-screen-xl flex py-5 items-center mx-auto justify-between'}>
             <nav className={'flex items-center'}>
             <img src="img/logo.png" alt=""/>
-                <ul className={'flex'}>
-                    {links.map(item => <li className={'px-5 hover:bg-light-blue hover:text-light-grey'} key={item.name}><Link to={'/liste/'+item.name}>{item.name}</Link></li>)}
+                <ul className={'pl-8 flex'}>
+                    {links.map(item => <li className={'px-5 hover:bg-light-blue hover:text-light-grey'} key={item.name}><Link to={linkTo(item.name)}>{item.name}</Link></li>)}
                 </ul>
             </nav>
-            <img src="img/search.svg" alt=""/>
+            <img className=" ml-8 py-2.5 cursor-pointer" src="static/svg/search.svg" alt=""/>
+            <div>
+                <input type="search" />
+            </div>
         </header>
     )
 
