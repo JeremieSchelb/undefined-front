@@ -1,6 +1,6 @@
 import './App.scss';
 import {Routes, Route, Link} from "react-router-dom"
-import Rescuer from "./components/Rescuer"
+import Rescuer from "./templates/Rescuer"
 
 function App() {
   return (
