@@ -18,11 +18,11 @@ function App() {
 
 
 function HelloWorld(){
-  return <h1 className="App-link bg-red-600">Hello world</h1>
+  return <h1 className="App-link bg-light-blue">Hello world</h1>
 }
 
 function BonjourMonde(){
-  return <h1 className="App-link bg-red-600">Bonjour monde</h1>
+  return <h1 className="App-link bg-dark-blue">Bonjour monde</h1>
 }
 
 export default App;
