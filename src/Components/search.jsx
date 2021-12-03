@@ -1,8 +1,8 @@
 import {Link} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const Search = (props) => {
-
-
 
 
     return (
@@ -14,9 +14,9 @@ const Search = (props) => {
                 <img className={'-ml-8'} src="img/search.svg" alt=""/>
             </div>
             <div>
-                <p className={'font-bold'}></p>
-                <ul className={}>
-                    <li><Link to={"/"}></Link></li>
+                <p className={'font-bold'}>ff</p>
+                <ul >
+
                 </ul>
             </div>
         </div>
