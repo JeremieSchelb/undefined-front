@@ -1,27 +1,21 @@
 import RescueCard from "./RescueCard";
 import axios from "axios";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 export default function RescueList() {
 
+    const [RescueData, setRescueData] = useState([]);
+
+    useEffect(() => {
+        axios.get('https://api.undefined.oserya.fr/api/rescues').then(response => {
+            setRescueData(response.data.data.splice(0, 3));
+        });
+    }, []);
 
     const list = () => {
-        let items = [
-            {id:0, title: 'titre 1', desc: 'Description 2', 'save' : 19},
-            {id:1, title: 'titre 2', desc: 'Description 2', 'save' : 19},
-            {id:2, title: 'titre 3', desc: 'Description 3', 'save' : 19},
-        ];
-
-        const [RescueData, setRescueData] = useState([])
-
-        axios.get('https://api.undefined.oserya.fr/api/rescues').then(response => {
-            setRescueData(response.data.data.splice(0,3));
-
-        })
-
         return RescueData.map(item => (
             <li key={item.id}>
-                <RescueCard data={item}/>
+                <RescueCard data={item} />
             </li>
         ));
     };

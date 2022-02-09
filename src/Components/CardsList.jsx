@@ -1,6 +1,6 @@
 import ArticleCard from "./ArticleCard";
 import axios from "axios";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 export default function CardsList() {
 
@@ -10,14 +10,14 @@ export default function CardsList() {
         axios.get('https://api.undefined.oserya.fr/api/articles').then(response => {
             setListData(response.data.data);
         });
-    })
+    }, []);
 
     const list = () => {
         return ListData.map(item => (
             <li key={item.id}>
                 <ArticleCard data={item} />
             </li>
-        ))
+        ));
     };
 
     return (
