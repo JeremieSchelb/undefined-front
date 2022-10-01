@@ -7,7 +7,7 @@ export default function CardsList() {
     const [ListData, setListData] = useState([]);
 
     useEffect(() => {
-        axios.get('https://api.undefined.oserya.fr/api/articles').then(response => {
+        axios.get('http://127.0.0.1:8000/api/articles').then(response => {
             setListData(response.data.data);
         });
     }, []);

@@ -15,7 +15,7 @@ const Search = (props) => {
             let input = e.target.value;
             setInputData(input);
             timeout = null;
-            axios.get('https://api.undefined.oserya.fr/api/search/' + input).then(response => {
+            axios.get('http://127.0.0.1:8000/api/search/' + input).then(response => {
                 setSearchData(response.data);
             });
         }, 500);
@@ -23,8 +23,10 @@ const Search = (props) => {
 
     const result = () => {
         return SearchData.map(item => (
-            <li key={item.id}>
-                {item.title.split(InputData)[0]}<span class="text-light-red">{InputData}</span>{item.title.split(InputData)[1]}
+            <li key={item.type + item.searchable.id}>
+                {item.title.split(InputData)[0]}
+                <span className="text-light-red">{InputData}</span>
+                {item.title.split(InputData)[1]}
             </li>
         ));
     };

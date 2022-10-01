@@ -7,7 +7,7 @@ export default function RescueList() {
     const [RescueData, setRescueData] = useState([]);
 
     useEffect(() => {
-        axios.get('https://api.undefined.oserya.fr/api/rescues').then(response => {
+        axios.get('http://127.0.0.1:8000/api/rescues').then(response => {
             setRescueData(response.data.data.splice(0, 3));
         });
     }, []);

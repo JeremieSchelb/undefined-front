@@ -13,7 +13,7 @@ export default function Listing(props) {
         let param = links.find(item => item.name == params.name);
         if(param) {
             axios
-            .get(`https://api.undefined.oserya.fr/api/${param.link}`)
+            .get('http://127.0.0.1:8000/api/' + param.link)
             .then(res => {
                 setItems(res.data.data)
             });
